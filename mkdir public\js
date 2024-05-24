@@ -1,0 +1,9 @@
+document.getElementById('employee-login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Employee login feature is under development.');
+    document.getElementById('employee-content').style.display = 'block';
+});
+
+document.getElementById('training-request-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Training request has been sent.');
