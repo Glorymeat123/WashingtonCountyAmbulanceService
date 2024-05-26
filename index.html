@@ -4,63 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Washington County Ambulance Service</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+    <style>
+        body {
+            background-color: #FF4500; /* Neon Orange */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: black;
+            color: gold;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .section {
+            background-color: black;
+            color: gold;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <header class="main-header">
+    <div class="header">
         <h1>WCAS</h1>
-        <h2 class="sub-header">Washington County Ambulance Service</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="employee.html">Employee</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="director.html">Director</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="centered">
-            <div class="content-wrapper">
-                <div class="side-info">
-                    <h3>Our Services</h3>
-                    <p>Emergency Medical Services</p>
-                    <p>Non-Emergency Transport</p>
-                    <p>Event Standby</p>
-                </div>
-                <img src="public/ambulance.jpg" alt="Ambulance" class="centered-img">
-                <div class="side-info">
-                    <h3>Contact Us</h3>
-                    <p>Phone: (123) 456-7890</p>
-                    <p>Email: info@wcas.com</p>
-                    <p>Address: 123 Main St, Anytown, USA</p>
-                </div>
-            </div>
-            <div class="text-box">
-                <h2>Mission Statement</h2>
-                <p>Our mission at Washington County Ambulance Service is to provide the highest level of emergency medical care and transportation services to our community. We are dedicated to serving with compassion, professionalism, and integrity.</p>
-            </div>
-        </section>
-        
-        <section id="training-mission" class="centered">
-            <div class="text-box">
-                <h2>Training Department Mission Statement</h2>
-                <p>Our Training Department is committed to providing high-quality education and training to ensure our team is equipped with the latest knowledge and skills in emergency medical care. We strive to foster a culture of continuous learning and improvement.</p>
-            </div>
-        </section>
-        
-        <section id="equipment" class="centered">
-            <div class="text-box">
-                <h2>State-of-the-Art Equipment and Protocols</h2>
-                <p>At Washington County Ambulance Service, we utilize state-of-the-art equipment and advanced protocols to ensure the best possible care for our patients. Our ambulances are equipped with the latest technology, and our team follows stringent protocols to provide efficient and effective medical care.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Washington County Ambulance Service</p>
-    </footer>
+        <h2>Washington County Ambulance Service</h2>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>At Washington County Ambulance Service, our mission is to provide the highest quality emergency medical services to our community with compassion, professionalism, and integrity.</p>
+        </div>
+        <div class="section">
+            <h2>State-of-the-Art Equipment</h2>
+            <p>We utilize the latest in medical technology and equipment to ensure that our patients receive the best possible care.</p>
+        </div>
+        <div class="section">
+            <h2>Training Department Mission</h2>
+            <p>Our training department is dedicated to providing comprehensive and ongoing education for our staff to maintain the highest standards of care.</p>
+            <img src="images/ambulance.jpg" alt="Ambulance">
+        </div>
+    </div>
 </body>
 </html>
