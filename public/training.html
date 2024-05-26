@@ -3,85 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Department - WCAS</title>
-    <style>
-        body {
-            background-color: #ADD8E6; /* Semi light blue */
-            color: white;
-            font-family: Arial, sans-serif;
-            padding: 0;
-            margin: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            background-color: black;
-            color: white;
-            padding: 10px 0;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .header h2 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-        .section {
-            background-color: black;
-            color: gold;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        input[type="text"], input[type="email"], select {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: gold;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Training - Washington County Ambulance Service</title>
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>WCAS</h1>
-        <h2>Washington County Ambulance Service</h2>
-    </div>
-    <div class="container">
-        <div class="section">
+    <header>
+        <h1>Washington County Ambulance Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="director.html">Director</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="training">
             <h2>Training Department</h2>
-            <p>Our training department is dedicated to providing comprehensive and ongoing education for our staff to maintain the highest standards of care.</p>
-            <form action="mailto:Joshuadarnell12@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Full Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="training_type">Training Type:</label><br>
-                <select id="training_type" name="training_type" required>
-                    <option value="" disabled selected>Select Training Type</option>
-                    <option value="aha_class">AHA Class</option>
+            <form id="training-request-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="training-type">Training Type:</label>
+                <select id="training-type" name="training-type" required>
+                    <option value="aha">AHA Class</option>
                     <option value="emt">EMT</option>
                     <option value="aemt">AEMT</option>
-                    <option value="stop_the_bleed">Stop the Bleed</option>
-                </select><br>
-                <input type="submit" value="Apply">
+                    <option value="stop-the-bleed">Stop the Bleed</option>
+                </select>
+                <button type="submit">Request Training</button>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Washington County Ambulance Service</p>
+    </footer>
+
+    <script src="public/js/scripts.js"></script>
 </body>
 </html>
-
