@@ -6,10 +6,9 @@
     <title>Washington County Ambulance Service</title>
     <style>
         body {
-            background-color: #FF4500; /* Neon Orange */
+            background-color: #ADD8E6; /* Semi light blue */
             color: white;
             font-family: Arial, sans-serif;
-            text-align: center;
             padding: 0;
             margin: 0;
         }
@@ -20,9 +19,10 @@
         }
         .header {
             background-color: black;
-            color: gold;
+            color: white;
             padding: 10px 0;
             margin-bottom: 20px;
+            text-align: center;
         }
         .header h1 {
             margin: 0;
@@ -34,6 +34,7 @@
         }
         .nav {
             margin: 20px 0;
+            text-align: center;
         }
         .nav a {
             margin: 0 10px;
@@ -55,12 +56,19 @@
             border-radius: 8px;
         }
         .contact {
-            float: right;
             text-align: left;
             margin: 20px;
         }
         .contact p {
             margin: 5px 0;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flex-item {
+            width: 48%;
         }
     </style>
 </head>
@@ -71,20 +79,16 @@
     </div>
     <div class="nav">
         <a href="index.html">Home</a>
-        <a href="state-of-the-art.html">State of the Art Equipment</a>
         <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="training.html">Training Department</a>
+        <a href="login.html">Employee Login</a>
     </div>
     <div class="container">
-        <div class="section">
-            <h2>Welcome to WCAS</h2>
-            <img src="images/ambulance.jpg" alt="Ambulance">
-            <div class="contact">
-                <h3>Contact Us</h3>
-                <p>Address: 1013 Webb Street, Salem, IN 47167</p>
-                <p>Phone: 812-883-2921</p>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="images/ambulance.jpg" alt="Ambulance">
             </div>
-        </div>
-    </div>
-</body>
-</html>
+            <div class="flex-item contact">
+                <h3>Contact Us</h3>
+                <p>Address: 
