@@ -25,12 +25,28 @@
             <h2>Careers</h2>
             <p>Current Openings:</p>
             <ul>
-                <li>Paramedic - $45,000/year, full benefits</li>
-                <li>EMT - $35,000/year, full benefits</li>
+                <li>Paramedic - $75.000/year, full benefits</li>
+                <li>EMT - $52,000/year, full benefits</li>
             </ul>
             <form id="career-application-form">
                 <label for="applicant-name">Name:</label>
                 <input type="text" id="applicant-name" name="name" required>
                 <label for="applicant-email">Email:</label>
                 <input type="email" id="applicant-email" name="email" required>
-                <label for="
+                <label for="position">Position:</label>
+                <select id="position" name="position" required>
+                    <option value="paramedic">Paramedic</option>
+                    <option value="emt">EMT</option>
+                </select>
+                <button type="submit">Apply</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Washington County Ambulance Service</p>
+    </footer>
+
+    <script src="public/js/scripts.js"></script>
+</body>
+</html>
