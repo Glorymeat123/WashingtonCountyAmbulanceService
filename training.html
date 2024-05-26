@@ -3,47 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training - Washington County Ambulance Service</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+    <title>Training Application - WCAS</title>
+    <style>
+        body {
+            background-color: #FF4500; /* Neon Orange */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 8px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: gold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Washington County Ambulance Service</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="employee.html">Employee</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="director.html">Director</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="training">
-            <h2>Training Department</h2>
-            <form id="training-request-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="training-type">Training Type:</label>
-                <select id="training-type" name="training-type" required>
-                    <option value="aha">AHA Class</option>
-                    <option value="emt">EMT</option>
-                    <option value="aemt">AEMT</option>
-                    <option value="stop-the-bleed">Stop the Bleed</option>
-                </select>
-                <button type="submit">Request Training</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Washington County Ambulance Service</p>
-    </footer>
-
-    <script src="public/js/scripts.js"></script>
+    <div class="container">
+        <h1>Training Application</h1>
+        <form action="/api/trainings" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <select name="training_type" required>
+                <option value="" disabled selected>Select Training Type</option>
+                <option value="aha_class">AHA Class</option>
+                <option value="emt">EMT</option>
+                <option value="aemt">AEMT</option>
+                <option value="stop_the_bleed">Stop the Bleed</option>
+            </select><br>
+            <input type="submit" value="Apply">
+        </form>
+    </div>
 </body>
 </html>
