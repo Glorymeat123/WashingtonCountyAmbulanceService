@@ -19,4 +19,5 @@ document.getElementById('career-application-form').addEventListener('submit', fu
 document.getElementById('director-login-form').addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Director login feature is under development.');
-    document.getElementBy
+    document.getElementById('director-content').style.display = 'block';
+});
