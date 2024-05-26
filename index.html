@@ -11,95 +11,25 @@
         <h1>Washington County Ambulance Service</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#employee">Employee</a></li>
-                <li><a href="#training">Training</a></li>
-                <li><a href="#careers">Careers</a></li>
-                <li><a href="#director">Director</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="director.html">Director</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home">
-            <h2>About Us</h2>
-            <p>Welcome to the Washington County Ambulance Service website.</p>
-        </section>
-
-        <section id="employee">
-            <h2>Employee Login</h2>
-            <form id="employee-login-form">
-                <label for="employee-username">Username:</label>
-                <input type="text" id="employee-username" name="username" required>
-                <label for="employee-password">Password:</label>
-                <input type="password" id="employee-password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-            <div id="employee-content" style="display: none;">
-                <h3>Employee Records</h3>
-                <p>Access your records, PDF files, and forms here.</p>
-            </div>
-        </section>
-
-        <section id="training">
-            <h2>Training Department</h2>
-            <form id="training-request-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="training-type">Training Type:</label>
-                <select id="training-type" name="training-type" required>
-                    <option value="aha">AHA Class</option>
-                    <option value="emt">EMT</option>
-                    <option value="aemt">AEMT</option>
-                    <option value="stop-the-bleed">Stop the Bleed</option>
-                </select>
-                <button type="submit">Request Training</button>
-            </form>
-        </section>
-
-        <section id="careers">
-            <h2>Careers</h2>
-            <p>Current Openings:</p>
-            <ul>
-                <li>Paramedic - $45,000/year, full benefits</li>
-                <li>EMT - $35,000/year, full benefits</li>
-            </ul>
-            <form id="career-application-form">
-                <label for="applicant-name">Name:</label>
-                <input type="text" id="applicant-name" name="name" required>
-                <label for="applicant-email">Email:</label>
-                <input type="email" id="applicant-email" name="email" required>
-                <label for="position">Position:</label>
-                <select id="position" name="position" required>
-                    <option value="paramedic">Paramedic</option>
-                    <option value="emt">EMT</option>
-                </select>
-                <button type="submit">Apply</button>
-            </form>
-        </section>
-
-        <section id="director">
-            <h2>Director Login</h2>
-            <form id="director-login-form">
-                <label for="director-username">Username:</label>
-                <input type="text" id="director-username" name="username" required>
-                <label for="director-password">Password:</label>
-                <input type="password" id="director-password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-            <div id="director-content" style="display: none;">
-                <h3>Director Files</h3>
-                <p>Access director-only files, forms, and programs here.</p>
-            </div>
+            <img src="public/images/ambulance.jpg" alt="Ambulance" style="width:100%;max-width:600px;margin:auto;display:block;">
+            <h2>Mission Statement</h2>
+            <p>Our mission at Washington County Ambulance Service is to provide the highest level of emergency medical care and transportation services to our community. We are dedicated to serving with compassion, professionalism, and integrity.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Washington County Ambulance Service</p>
     </footer>
-
-    <script src="public/js/scripts.js"></script>
 </body>
 </html>
