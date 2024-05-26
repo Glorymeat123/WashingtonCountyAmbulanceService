@@ -3,50 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - Washington County Ambulance Service</title>
-    <link rel="stylesheet" href="public/css/styles.css">
+    <title>Careers - WCAS</title>
+    <style>
+        body {
+            background-color: #FF4500; /* Neon Orange */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: black;
+            color: gold;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .section {
+            background-color: black;
+            color: gold;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: gold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Washington County Ambulance Service</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="employee.html">Employee</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="director.html">Director</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="careers">
+    <div class="header">
+        <h1>WCAS</h1>
+        <h2>Washington County Ambulance Service</h2>
+    </div>
+    <div class="container">
+        <div class="section">
             <h2>Careers</h2>
-            <p>Current Openings:</p>
+            <p>Join our team and make a difference in our community. We offer competitive pay and a flexible schedule.</p>
             <ul>
-                <li>Paramedic - $75.000/year, full benefits</li>
-                <li>EMT - $52,000/year, full benefits</li>
+                <li>Paramedic: $68,000</li>
+                <li>AEMT: $58,000</li>
+                <li>EMT: $50,000</li>
             </ul>
-            <form id="career-application-form">
-                <label for="applicant-name">Name:</label>
-                <input type="text" id="applicant-name" name="name" required>
-                <label for="applicant-email">Email:</label>
-                <input type="email" id="applicant-email" name="email" required>
-                <label for="position">Position:</label>
-                <select id="position" name="position" required>
-                    <option value="paramedic">Paramedic</option>
-                    <option value="emt">EMT</option>
-                </select>
-                <button type="submit">Apply</button>
+            <p>Schedule: 24/48 with the option of a Kelly day.</p>
+            <h3>Apply Now</h3>
+            <form action="mailto:Joshuadarnell12@gmail.com" method="post" enctype="text/plain">
+                <label for="name">First and Last Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br>
+                <label for="employment">Full Time or Part Time:</label><br>
+                <input type="text" id="employment" name="employment" required><br>
+                <label for="position">Position (EMT, AEMT, Paramedic):</label><br>
+                <input type="text" id="position" name="position" required><br>
+                <label for="psid">PSID Number:</label><br>
+                <input type="text" id="psid" name="psid" required><br>
+                <label for="cpr">CPR Certified (Yes/No):</label><br>
+                <input type="text" id="cpr" name="cpr" required><br>
+                <label for="acls">ACLS Certified (Yes/No):</label><br>
+                <input type="text" id="acls" name="acls" required><br>
+                <label for="pals">PALS Certified (Yes/No):</label><br>
+                <input type="text" id="pals" name="pals" required><br>
+                <label for="crime">Have you been convicted of a crime? (Yes/No):</label><br>
+                <input type="text" id="crime" name="crime" required><br>
+                <label for="explain">If yes, please explain:</label><br>
+                <textarea id="explain" name="explain"></textarea><br>
+                <input type="submit" value="Submit">
             </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Washington County Ambulance Service</p>
-    </footer>
-
-    <script src="public/js/scripts.js"></script>
+        </div>
+    </div>
 </body>
 </html>
