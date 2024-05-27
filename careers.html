@@ -58,11 +58,13 @@
             margin: 10px;
         }
         .section-title {
-            font-size: 1.5em;
+            font-size: 2em; /* Increased size */
             margin-bottom: 10px;
         }
-        .services-list {
-            font-weight: bold;
+        .right img {
+            width: 40%; /* Reduced by 60% */
+            display: block;
+            margin: 0 auto;
         }
         .mission-statement {
             font-size: 1.2em;
@@ -74,11 +76,6 @@
         }
         .mission-statement p {
             color: black; /* Black text for the statements */
-        }
-        footer {
-            background-color: #f1f1f1;
-            padding: 10px 0;
-            text-align: center;
         }
         .form-container {
             background-color: black; /* Black text box */
@@ -93,7 +90,8 @@
         }
         .form-container input[type="text"], 
         .form-container input[type="date"],
-        .form-container select {
+        .form-container select,
+        .form-container textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -112,6 +110,11 @@
         .form-container input[type="submit"]:hover {
             background-color: #0000CC;
         }
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            text-align: center;
+        }
         @media (max-width: 600px) {
             nav ul li {
                 display: block;
@@ -122,6 +125,16 @@
             }
         }
     </style>
+    <script>
+        function handleCrimeChange(select) {
+            const crimeExplanation = document.getElementById('crime-explanation');
+            if (select.value === 'yes') {
+                crimeExplanation.style.display = 'block';
+            } else {
+                crimeExplanation.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -142,6 +155,7 @@
             <div class="left">
                 <h2 class="section-title">Join Our Team</h2>
                 <p>Washington County Ambulance Service is seeking dedicated professionals to join our team. We offer competitive salaries, comprehensive benefits, and opportunities for advancement. If you are passionate about providing exceptional emergency medical care, we want to hear from you!</p>
+                <p>Our state-of-the-art equipment and protocols ensure that you have the best tools to provide top-notch care. We also offer a 24/48 scheduling system, allowing for a balanced work-life schedule.</p>
             </div>
             <div class="right">
                 <img src="public/ambulance.jpg" alt="Ambulance">
@@ -170,6 +184,20 @@
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
+                <label for="pals">PALS Certification:</label>
+                <select name="pals" id="pals" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <label for="crime">Ever Convicted of a Crime:</label>
+                <select name="crime" id="crime" onchange="handleCrimeChange(this)" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+                <div id="crime-explanation" style="display:none;">
+                    <label for="crime-details">If yes, please explain:</label>
+                    <textarea name="crime-details" id="crime-details" rows="4"></textarea>
+                </div>
                 <input type="submit" value="Submit Application">
             </form>
         </section>
