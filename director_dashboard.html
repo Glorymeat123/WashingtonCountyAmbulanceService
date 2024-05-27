@@ -114,6 +114,23 @@
         .pdf-links a:hover {
             text-decoration: underline;
         }
+        .maintenance-requests {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: black;
+            color: gold;
+            border-radius: 5px;
+        }
+        .maintenance-requests h3 {
+            margin-top: 0;
+        }
+        .maintenance-requests ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .maintenance-requests ul li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -158,6 +175,29 @@
                 <div class="form-container">
                     <h3>Employee Management</h3>
                     <a href="path/to/employee_management.html" target="_blank">Manage Employees</a>
+                </div>
+                <div class="maintenance-requests">
+                    <h3>Maintenance Requests</h3>
+                    <ul>
+                        <?php
+                        // Read the maintenance requests from the file
+                        if (file_exists('maintenance_requests.json')) {
+                            $requests = file('maintenance_requests.json', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                            foreach ($requests as $request) {
+                                $data = json_decode($request, true);
+                                echo '<li>';
+                                echo '<strong>Equipment/Part:</strong> ' . htmlspecialchars($data['equipment_name']) . '<br>';
+                                echo '<strong>Issue Type:</strong> ' . htmlspecialchars($data['issue_type']) . '<br>';
+                                echo '<strong>Reported To:</strong> ' . htmlspecialchars($data['reported_to']) . '<br>';
+                                echo '<strong>Date:</strong> ' . htmlspecialchars($data['incident_date']) . '<br>';
+                                echo '<strong>Vehicle Number:</strong> ' . htmlspecialchars($data['vehicle_number']);
+                                echo '</li>';
+                            }
+                        } else {
+                            echo '<li>No maintenance requests found.</li>';
+                        }
+                        ?>
+                    </ul>
                 </div>
             </div>
             <div class="right">
