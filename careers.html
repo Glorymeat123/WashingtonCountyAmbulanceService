@@ -10,10 +10,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ADD8E6; /* Baby blue background */
         }
         header {
-            background-color: #0000FF;
+            background-color: #0000FF; /* Blue */
             color: white;
             padding: 15px 0;
             position: sticky;
@@ -39,29 +39,65 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
-        .content-container {
-            background-color: white;
+        main {
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: black; /* Black text box */
+            color: gold; /* Gold text */
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .services-list {
+            font-weight: bold;
+        }
+        .mission-statement {
+            font-size: 1.2em;
+            margin-top: 20px;
+            background-color: black; /* Black text box */
+            color: gold; /* Gold text */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .mission-statement p {
+            color: black; /* Black text for the statements */
+        }
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .form-container {
+            background-color: black; /* Black text box */
+            color: gold; /* Gold text */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin: 50px auto;
-            text-align: center;
+            margin: 20px 0;
         }
-        .content-container h2 {
-            margin-bottom: 20px;
-        }
-        .content-container p {
-            margin-bottom: 20px;
-        }
-        .content-container input[type="text"], .content-container input[type="email"], .content-container textarea {
+        .form-container input[type="text"], 
+        .form-container input[type="date"],
+        .form-container select {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .content-container input[type="submit"] {
+        .form-container input[type="submit"] {
             width: 100%;
             padding: 10px;
             background-color: #0000FF;
@@ -70,8 +106,17 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .content-container input[type="submit"]:hover {
+        .form-container input[type="submit"]:hover {
             background-color: #0000CC;
+        }
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -88,15 +133,47 @@
             </ul>
         </nav>
     </header>
-    <div class="content-container">
-        <h2>Careers</h2>
-        <p>Join our team at Washington County Ambulance Service! We are looking for dedicated professionals to provide top-notch medical care to our community.</p>
-        <form action="submit_application.php" method="post">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="cover_letter" placeholder="Cover Letter" rows="5" required></textarea>
-            <input type="submit" value="Submit Application">
-        </form>
-    </div>
+
+    <main>
+        <section id="careers" class="container">
+            <div class="left">
+                <h2 class="section-title">Join Our Team</h2>
+                <p>Washington County Ambulance Service is seeking dedicated professionals to join our team. We offer competitive salaries, comprehensive benefits, and opportunities for advancement. If you are passionate about providing exceptional emergency medical care, we want to hear from you!</p>
+            </div>
+            <div class="right">
+                <img src="public/ambulance.jpg" alt="Ambulance">
+            </div>
+        </section>
+
+        <section class="form-container">
+            <h2>Application Form</h2>
+            <form action="submit_application.php" method="post">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="date" name="dob" placeholder="Date of Birth" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <label for="position">Position:</label>
+                <select name="position" id="position" required>
+                    <option value="medic">Medic</option>
+                    <option value="aemt">AEMT</option>
+                    <option value="emt">EMT</option>
+                </select>
+                <label for="cpr">CPR Certification:</label>
+                <select name="cpr" id="cpr" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <label for="acls">ACLS Certification:</label>
+                <select name="acls" id="acls" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <input type="submit" value="Submit Application">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Washington County Ambulance Service</p>
+    </footer>
 </body>
 </html>
