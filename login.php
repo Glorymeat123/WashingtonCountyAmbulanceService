@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $error = 'Invalid username or password';
     }
+} else {
+    $error = 'Form not submitted correctly';
 }
 ?>
 
@@ -159,38 +161,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="index.html">Home</a></li>
                 <li><a href="employee.html">Employee</a></li>
                 <li><a href="training.html">Training Department</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="director.html">Director</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="director" class="container">
-            <div class="left">
-                <h2 class="section-title">Tony Floyd</h2>
-                <div class="image-placeholder">Placeholder for Tony Floyd's Picture</div>
-                <p>Tony Floyd, a highly educated provider with many years of experience as a paramedic, leads our team with dedication and expertise. His commitment to excellence in emergency medical care ensures that our community receives the highest quality service. Tony's extensive knowledge and compassionate approach make him a respected leader in the field.</p>
-            </div>
-            <div class="right">
-                <h2 class="section-title">Director's Statement</h2>
-                <p>"At Washington County Ambulance Service, we strive to provide the best emergency medical services with state-of-the-art equipment and protocols. Our team is dedicated to maintaining the highest standards of care and professionalism. We are committed to serving our community with integrity and compassion." - Tony Floyd</p>
-            </div>
-        </section>
-
-        <section class="form-container">
-            <h2>Director Login</h2>
-            <?php if (isset($error)) { echo "<p style='color:red;'>$error</p>"; } ?>
-            <form action="login.php" method="post">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="submit" value="Login">
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Washington County Ambulance Service</p>
-    </footer>
-</body>
-</html>
+                <li><a href="careers.html">Careers</a></li
