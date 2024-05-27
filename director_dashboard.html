@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Dashboard - Washington County Ambulance Service</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .dashboard-container {
+            padding: 20px;
+        }
+        .dashboard-container h2 {
+            margin-bottom: 20px;
+        }
+        .pdf-links, .complaints {
+            margin-bottom: 20px;
+        }
+        .pdf-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0000FF;
+            text-decoration: none;
+        }
+        .pdf-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, Director</h2>
+        <div class="pdf-links">
+            <h3>Master Forms</h3>
+            <a href="path/to/master_form1.pdf" target="_blank">Master Form 1</a>
+            <a href="path/to/master_form2.pdf" target="_blank">Master Form 2</a>
+        </div>
+        <div class="complaints">
+            <h3>Received Complaints</h3>
+            <ul>
+                <!-- Complaints will be dynamically inserted here -->
+                <li>Complaint 1: [Details]</li>
+                <li>Complaint 2: [Details]</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
