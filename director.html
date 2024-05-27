@@ -3,44 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Director - Washington County Ambulance Service</title>
+    <title>Director Login - Washington County Ambulance Service</title>
     <link rel="stylesheet" href="public/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0000FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #0000CC;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Washington County Ambulance Service</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="employee.html">Employee</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="director.html">Director</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="director">
-            <h2>Director Login</h2>
-            <form id="director-login-form">
-                <label for="director-username">Username:</label>
-                <input type="text" id="director-username" name="username" required>
-                <label for="director-password">Password:</label>
-                <input type="password" id="director-password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-            <div id="director-content" style="display: none;">
-                <h3>Director Files</h3>
-                <p>Access director-only files, forms, and programs here.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Washington County Ambulance Service</p>
-    </footer>
-
-    <script src="public/js/scripts.js"></script>
+    <div class="login-container">
+        <h2>Director Login</h2>
+        <form action="director_dashboard.html" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
 </body>
 </html>
