@@ -39,11 +39,68 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
-        .dashboard-container {
+        main {
             padding: 20px;
         }
-        .dashboard-container h2 {
-            margin-bottom: 20px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: black; /* Black text box */
+            color: gold; /* Gold text */
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .mission-statement {
+            font-size: 1.2em;
+            margin-top: 20px;
+            background-color: black; /* Black text box */
+            color: gold; /* Gold text */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .mission-statement p {
+            color: black; /* Black text for the statements */
+        }
+        .form-container {
+            background-color: #0000FF; /* Blue text box */
+            color: white; /* White text */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .form-container a {
+            color: white;
+            text-decoration: none;
+        }
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+        .weather-radar {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .complaints {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: black;
+            color: gold;
+            border-radius: 5px;
         }
         .pdf-links, .complaints {
             margin-bottom: 20px;
@@ -72,21 +129,48 @@
             </ul>
         </nav>
     </header>
-    <div class="dashboard-container">
-        <h2>Welcome, Tony Floyd</h2>
-        <div class="pdf-links">
-            <h3>Master Forms</h3>
-            <a href="path/to/master_form1.pdf" target="_blank">Master Form 1</a>
-            <a href="path/to/master_form2.pdf" target="_blank">Master Form 2</a>
-        </div>
-        <div class="complaints">
-            <h3>Received Complaints</h3>
-            <ul>
-                <!-- Complaints will be dynamically inserted here -->
-                <li>Complaint 1: [Details]</li>
-                <li>Complaint 2: [Details]</li>
-            </ul>
-        </div>
-    </div>
+
+    <main>
+        <section id="director" class="container">
+            <div class="left">
+                <h2 class="section-title">Welcome, Tony Floyd</h2>
+                <p>As the director of the Washington County Ambulance Service, you have access to various administrative tools and resources to help you manage the service efficiently.</p>
+                <div class="pdf-links">
+                    <h3>Master Forms</h3>
+                    <a href="path/to/master_form1.pdf" target="_blank">Master Form 1</a>
+                    <a href="path/to/master_form2.pdf" target="_blank">Master Form 2</a>
+                </div>
+                <div class="complaints">
+                    <h3>Received Complaints</h3>
+                    <ul>
+                        <li>Complaint 1: [Details]</li>
+                        <li>Complaint 2: [Details]</li>
+                    </ul>
+                </div>
+                <div class="form-container">
+                    <h3>Submit New Form</h3>
+                    <a href="path/to/form_submission.html" target="_blank">Form Submission Page</a>
+                </div>
+                <div class="form-container">
+                    <h3>View Reports</h3>
+                    <a href="path/to/reports.html" target="_blank">Monthly Reports</a>
+                </div>
+                <div class="form-container">
+                    <h3>Employee Management</h3>
+                    <a href="path/to/employee_management.html" target="_blank">Manage Employees</a>
+                </div>
+            </div>
+            <div class="right">
+                <h2 class="section-title">Director's Dashboard</h2>
+                <div class="weather-radar">
+                    <iframe src="https://www.weather.com/weather/radar/interactive/l/USIN0033:1:US" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Washington County Ambulance Service</p>
+    </footer>
 </body>
 </html>
