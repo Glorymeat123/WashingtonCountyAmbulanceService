@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Washington County Ambulance Service</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .dashboard-container {
+            padding: 20px;
+        }
+        .dashboard-container h2 {
+            margin-bottom: 20px;
+        }
+        .pdf-links, .other-links {
+            margin-bottom: 20px;
+        }
+        .pdf-links a, .other-links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0000FF;
+            text-decoration: none;
+        }
+        .pdf-links a:hover, .other-links a:hover {
+            text-decoration: underline;
+        }
+        .weather-radar {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, [Employee Name]</h2>
+        <div class="pdf-links">
+            <h3>Daily Forms</h3>
+            <a href="path/to/form1.pdf" target="_blank">Daily Form 1</a>
+            <a href="path/to/form2.pdf" target="_blank">Daily Form 2</a>
+        </div>
+        <div class="other-links">
+            <h3>Other Resources</h3>
+            <a href="https://vectorscheduling.com" target="_blank">
+                <img src="public/vector_logo.png" alt="Vector Scheduling Logo" style="width: 150px;">
+            </a>
+        </div>
+        <div class="weather-radar">
+            <h3>Weather Radar</h3>
+            <iframe src="https://weather.com/weather/radar/interactive/l/Southern+Indiana" width="600" height="400"></iframe>
+        </div>
+        <div class="employee-complaints">
+            <h3>Employee Complaints</h3>
+            <form action="send_complaint.php" method="post">
+                <textarea name="complaint" rows="5" style="width: 100%;" placeholder="Enter your complaint here"></textarea>
+                <input type="submit" value="Submit Complaint" style="margin-top: 10px;">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
