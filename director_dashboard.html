@@ -12,6 +12,33 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+        header {
+            background-color: #0000FF;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
         .dashboard-container {
             padding: 20px;
         }
@@ -33,8 +60,20 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Washington County Ambulance Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employee.html">Employee</a></li>
+                <li><a href="training.html">Training Department</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="director.html">Director</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="dashboard-container">
-        <h2>Welcome, Director</h2>
+        <h2>Welcome, Tony Floyd</h2>
         <div class="pdf-links">
             <h3>Master Forms</h3>
             <a href="path/to/master_form1.pdf" target="_blank">Master Form 1</a>
