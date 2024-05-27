@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Director Dashboard - Washington County Ambulance Service</title>
+    <title>Employee Dashboard - Washington County Ambulance Service</title>
     <link rel="stylesheet" href="public/css/styles.css">
     <style>
         body {
@@ -39,23 +39,39 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
-        .dashboard-container {
+        main {
             padding: 20px;
         }
-        .dashboard-container h2 {
-            margin-bottom: 20px;
+        .form-container {
+            background-color: #0000FF; /* Blue text box */
+            color: white; /* White text */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
         }
-        .pdf-links, .complaints {
-            margin-bottom: 20px;
+        .form-container input[type="text"], 
+        .form-container input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        .pdf-links a {
-            display: block;
-            margin-bottom: 10px;
-            color: #0000FF;
-            text-decoration: none;
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0000FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .pdf-links a:hover {
-            text-decoration: underline;
+        .form-container input[type="submit"]:hover {
+            background-color: #0000CC;
         }
     </style>
 </head>
@@ -72,21 +88,24 @@
             </ul>
         </nav>
     </header>
-    <div class="dashboard-container">
-        <h2>Welcome, Tony Floyd</h2>
-        <div class="pdf-links">
-            <h3>Master Forms</h3>
-            <a href="path/to/master_form1.pdf" target="_blank">Master Form 1</a>
-            <a href="path/to/master_form2.pdf" target="_blank">Master Form 2</a>
-        </div>
-        <div class="complaints">
-            <h3>Received Complaints</h3>
-            <ul>
-                <!-- Complaints will be dynamically inserted here -->
-                <li>Complaint 1: [Details]</li>
-                <li>Complaint 2: [Details]</li>
-            </ul>
-        </div>
-    </div>
+
+    <main>
+        <h2>Employee Dashboard</h2>
+        <section class="form-container">
+            <h2>Maintenance Request Form</h2>
+            <form action="submit_maintenance_request.php" method="post">
+                <input type="text" name="equipment_name" placeholder="Equipment Name/Part" required>
+                <input type="text" name="issue_type" placeholder="Issue Type" required>
+                <input type="text" name="reported_to" placeholder="Reported To" required>
+                <input type="date" name="incident_date" placeholder="Date Incident Took Place" required>
+                <input type="text" name="vehicle_number" placeholder="Vehicle Number (if applicable)">
+                <input type="submit" value="Submit Request">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Washington County Ambulance Service</p>
+    </footer>
 </body>
 </html>
