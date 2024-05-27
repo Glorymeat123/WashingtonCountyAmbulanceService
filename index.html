@@ -5,6 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Washington County Ambulance Service</title>
     <link rel="stylesheet" href="public/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0000FF; /* Changed to blue */
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        #home img {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            display: block;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +81,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="employee.html">Employee</a></li>
-                <li><a href="training.html">Training</a></li>
+                <li><a href="training.html">Training Department</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="director.html">Director</a></li>
             </ul>
@@ -21,10 +89,32 @@
     </header>
 
     <main>
-        <section id="home">
-            <img src="public/ambulance.jpg" alt="Ambulance" style="width:100%;max-width:600px;margin:auto;display:block;">
+        <section id="home" class="container">
+            <div class="left">
+                <h2>Services Provided</h2>
+                <ul>
+                    <li>Emergency Medical Services</li>
+                    <li>Non-Emergency Medical Transport</li>
+                    <li>Community Health Education</li>
+                    <li>Disaster Response</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="public/ambulance.jpg" alt="Ambulance">
+                <h2>Contact Information</h2>
+                <p>Washington County Ambulance Service<br>
+                1234 Elm Street<br>
+                Anytown, IN 46123<br>
+                Phone: (555) 555-5555<br>
+                Email: contact@wcambulance.org</p>
+            </div>
+        </section>
+
+        <section>
             <h2>Mission Statement</h2>
             <p>Our mission at Washington County Ambulance Service is to provide the highest level of emergency medical care and transportation services to our community. We are dedicated to serving with compassion, professionalism, and integrity.</p>
+            <h2>Training Department Mission Statement</h2>
+            <p>We are committed to creating the providers of tomorrow and educating the citizens daily. Contact Washington County Ambulance Service for more information.</p>
         </section>
     </main>
 
